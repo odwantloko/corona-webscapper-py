@@ -17,5 +17,11 @@ page_soup = soup(page_html, "html.parser")
 # scrape the 'tests conducted' value from the website
 test_attr = page_soup.h3.text
 
+date = datetime.datetime.now()
 
+# Write the scrapped data to Firebase
+firebase = firebase.FirebaseApplication('https://my-corona-app.firebaseio.com/', None)
+data =  { 'TestsConducted': test_attr,
+          'Date':date}
+result = firebase.post('TestData',data)
 
