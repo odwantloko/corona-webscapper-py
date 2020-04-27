@@ -5,3 +5,7 @@ government website, and stores the value in Firebase
 # The dependencies required to be installed are:
 BeautifulSoup4
 Python-Firebase
+Python 3
+
+#To run:
+python webscrapper.py or run via preferred IDE/editor
